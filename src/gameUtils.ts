@@ -51,11 +51,9 @@ namespace gameUtils {
 		var y = (A * A * p0.y - A * B * p0.x - B * C) * D;
 		var nx = p0.x - x;
 		var ny = p0.y - y;
-		console.log(x, y);
 		var r = 1 / Math.sqrt(nx*nx+ny*ny);
 		nx *= r;
 		ny *= r;
-		console.log(nx, ny);
 		var d = dx * nx + dy * ny;
 		var vx = dx - 2 * nx * d;
 		var vy = dy - 2 * ny * d;
@@ -145,17 +143,16 @@ namespace gameUtils {
     }
     
 	// 游戏过程中,实时计算得分
-	export async function addScore(s, n, score) {
-		var s1 = score;
-		score += s;
+	export async function addScore(s, n) {
+		var s1 = totalScore;
+		totalScore += s;
 		var d = (s / 10)|0;
 		for(let i = 0; i < 10; i++){
 			s1 += d;
 			n.score.text = `得分 ${s1}`;
 			await ez.delay(30);
 		}
-        n.score.text = `得分 ${score}`;
-        totalScore = score
+        n.score.text = `得分 ${totalScore}`;
     }
     
     // 开始游戏
@@ -242,7 +239,7 @@ namespace gameUtils {
 							s.gradient = { y1: 30, colors: ["#8ff", "#8af"] };
 						}
 						ez.Tween.add(s).move({y:[e.y, e.y - 30], opacity: [0.5, 1]}, 300, ez.Ease.bounceOut).move({opacity:[1, 0]}, 2000).disposeTarget().play();
-						addScore(score, n, totalScore);
+						addScore(score, n);
 						ez.playSFX(score > 0 ? "sound/add" : "sound/lose");
 						e.dispose();
 						enemies.splice(i, 1);
@@ -319,7 +316,7 @@ namespace gameUtils {
 	}
     
     // 游戏结束执行回调,显示结束弹窗
-	export async function showResult(ctx, score) {
+	export async function showResult(ctx) {
 		function commitScore(score) {
 			return new Promise((resolve, reject) =>{
 				// var key = "zxdqw";
@@ -338,15 +335,12 @@ namespace gameUtils {
 		}
 		var page = ctx.parent.createChild(game.ResultPage);
 		var n = page.namedChilds;
-		n.score.text = "" + score;
-		console.log('score', score)
-		var data = await commitScore(score);
-		console.log('score', score)
+		n.score.text = "" + totalScore;
+		var data = await commitScore(totalScore);
 		game.getRank(n.rankPage);
 		if (data)
 			n.info.text = `超过了${data}的玩家`;
 		page.addEventHandler("click", function(e){
-			console.log('e', e)
 			switch (e.sender.id) {
 				case "rank":
 					n.rankPage.visible = true;
@@ -366,7 +360,7 @@ namespace gameUtils {
 					if (data)
 						n1.info.text = `超过了${data}的玩家`;
 					n1.name.text = "姓名：" + PlayerInfo.nickname;
-					n1.score.text = "成绩：" + score;
+					n1.score.text = "成绩：" + totalScore;
 					ez.setTimer(100, function () {
 
 						var div = document.getElementById("game");

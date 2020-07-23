@@ -58,16 +58,13 @@ namespace game {
 	].map(l => [{ x: l[0], y: l[1] }, { x: l[2], y: l[3] }] );
 
 	var launchResovle = null; // 是否可以发射（发射中不可再发射）
-	var score = 0;
 
 
-	console.log('gameUtils', gameUtils)
 	// 导出构造函数, 用于创建游戏UI和交互逻辑
 	export class GamePage1 extends _GamePage1 {
 
 		constructor(parent: ui.Container) {
 			super(parent);
-			score = 0;
 			var lastLine = lines[lines.length - 1];
 			lastLine[0].y = lastLine[1].y = parent.getBound().height - 0;
 			const n = this.namedChilds;
@@ -140,7 +137,7 @@ namespace game {
 				hole,
 				player,
 				gameOver () {
-					gameUtils.showResult(ctx, score);
+					gameUtils.showResult(ctx);
 				},
 				launchResovleStatusChange (val) {
 					launchResovle = val
