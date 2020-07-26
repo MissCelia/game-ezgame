@@ -14,29 +14,38 @@ namespace game {
 	var enemiesData = [
 		{ type: EnemyType.Batman, x: 77, y: 852  },
 		{ type: EnemyType.Batman, x: 77, y: 536  },
-		{ type: EnemyType.Batman, x: 435, y: 398 },
 		{ type: EnemyType.Batman, x: 589, y: 217 },
+		{ type: EnemyType.Batman, x: 286, y: 283 },
+		{ type: EnemyType.Batman, x: 358, y: 157 },
+		{ type: EnemyType.Batman, x: 575, y: 415 },
+		{ type: EnemyType.Batman, x: 393, y: 534 },
+		{ type: EnemyType.Batman, x: 369, y: 640 },
+		{ type: EnemyType.Batman, x: 604, y: 921 },
+		{ type: EnemyType.Batman, x: 464, y: 965 },
 		{ type: EnemyType.Batman, x: 189, y: 551 },
-		{ type: EnemyType.Logo, x: 617, y: 497 },
-		{ type: EnemyType.Logo, x: 222, y: 361 },
-		{ type: EnemyType.Logo, x: 337, y: 765 },
-		{ type: EnemyType.BatmanKing, x: 265, y: 785 },
-		{ type: EnemyType.Mask, x: 87.5, y: 696 },
-		{ type: EnemyType.Boom, x: 166, y: 260 }
+		{ type: EnemyType.Batman, x: 347, y: 835 },
+		{ type: EnemyType.Batman, x: 482, y: 820 },
+		{ type: EnemyType.Batman, x: 289, y: 521 },
+		{ type: EnemyType.Logo, x: 517, y: 497 },
+		{ type: EnemyType.Logo, x: 322, y: 361 },
+		{ type: EnemyType.Logo, x: 137, y: 765 },
+		{ type: EnemyType.Logo, x: 237, y: 265 },
+		{ type: EnemyType.BatmanKing, x: 575, y: 685 },
+		{ type: EnemyType.BatmanKing, x: 275, y: 285 },
+		{ type: EnemyType.Mask, x: 187.5, y: 656 },
+		{ type: EnemyType.Boom, x: 166, y: 260 },
+		{ type: EnemyType.Boom, x: 366, y: 360 },
+		{ type: EnemyType.Boom, x: 620, y: 500 }
 	]
 
 	// 黑洞的位置
-	var hole = [318, 578];
+	var hole = [-100, -100];
 
 	// 设置墙体位置
 	var lines = [
 		[0,  70, 490, 70],
-		[490,70, 710, 205],
-		[710, 205, 710, 524],
-		[710, 524, 446, 695],
-		[446, 695, 466, 723],
-		[466, 723, 710, 564],
-		[710, 564, 710, 1280],
+		[490, 70, 710, 205],
+		[710, 205, 710, 1280],
 		[0, 70, 0, 1280],
 		[120, 902, 361, 902],
 		[361, 902, 361, 934],
@@ -125,7 +134,7 @@ namespace game {
 				hole,
 				player,
 				gameOver () {
-					gameUtils.showResult(ctx);
+					gameUtils.showResult(ctx, 'GamePage3');
 				},
 				launchResovleStatusChange (val) {
 					launchResovle = val

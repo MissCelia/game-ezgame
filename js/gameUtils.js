@@ -125,7 +125,7 @@ var gameUtils;
                 break;
             case EnemyType.Boom:
                 s.src = "game/boom";
-                data.score = -10;
+                data.score = -30;
                 data.radius = 20;
                 break;
             case EnemyType.Logo:
@@ -263,8 +263,8 @@ var gameUtils;
                         }
                         n.chance.text = "\u673A\u4F1A " + chance;
                         options.launchResovleStatusChange && options.launchResovleStatusChange(null);
-                        dx = r[0] * 0.25;
-                        dy = r[1] * 0.25;
+                        dx = r[0] * 0.35;
+                        dy = r[1] * 0.35;
                         _a.label = 3;
                     case 3:
                         if (!true) return [3, 15];
@@ -396,10 +396,21 @@ var gameUtils;
         });
     }
     gameUtils.startGame = startGame;
-    function showResult(ctx) {
+    function showResult(ctx, nextStage) {
         return __awaiter(this, void 0, void 0, function () {
             function commitScore(score) {
                 return new Promise(function (resolve, reject) {
+                    var key = "zxdqw";
+                    var timestamp = Date.now();
+                    var sign = md5.hex(key + "openid" + PlayerInfo.openid + "score" + score + timestamp);
+                    ajax("https://xwfintech.qingke.io/openapi/pinball/add/measy?key=" + key + "&sign=" + sign + "&openid=" + PlayerInfo.openid + "&score=" + score + "&timestamp=" + timestamp, function (e, r) {
+                        if (r.code) {
+                            alert(r.msg);
+                            reject();
+                        }
+                        else
+                            resolve(r.data);
+                    });
                     resolve();
                 });
             }
@@ -410,9 +421,6 @@ var gameUtils;
                         page = ctx.parent.createChild(game.ResultPage);
                         n = page.namedChilds;
                         n.score.text = "" + totalScore;
-                        return [4, commitScore(totalScore)];
-                    case 1:
-                        data = _a.sent();
                         game.getRank(n.rankPage);
                         if (data)
                             n.info.text = "\u8D85\u8FC7\u4E86" + data + "\u7684\u73A9\u5BB6";
@@ -425,7 +433,7 @@ var gameUtils;
                                     n.rankPage.visible = false;
                                     break;
                                 case "replay":
-                                    page.parent.createChild(game.GamePage2);
+                                    page.parent.createChild(game[nextStage]);
                                     page.dispose();
                                     break;
                                 case "result":
@@ -446,6 +454,9 @@ var gameUtils;
                             }
                         });
                         ctx.dispose();
+                        return [4, commitScore(totalScore)];
+                    case 1:
+                        data = _a.sent();
                         return [2];
                 }
             });

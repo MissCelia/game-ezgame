@@ -15,7 +15,7 @@ var game;
 (function (game) {
     var ui = ez.ui;
     var UI = ["Image", "Label", "UIStage", "Control", "Group", "RectFill", "game.Button", "game.Checkbox", "game.StartPage", "game.RankPage", "ScrollView", "ListView"];
-    var RES = ["R:G503ILGF8S28", "R:O123T11GLFK9", "R:CTDCID13AB9F", "R:JCF2OQOGMT7O", "R:B0LVRU4VENJS", "R:1EF948RMIQRD", "R:HA8GLOB3BT28", "R:4PGJIM7IPCOV", "R:QJ204MMAGROF", "R:LAO8Q29LE1TO", "R:4LVSPIK3B203", "R:S9IQLHG3U700", "R:INH1T34JAHE4", "R:U7VJ9SGIHTNO", "R:P637DGG88RRB", "R:307B8VJHSQ38", "R:O18PU18DTSMO", "R:85GD560O0A62", "R:RGDNTIFOJEJ1", "R:PQF1C511M1BQ", "R:5A1F5RDNRR3D", "R:SPMG8J9324MB", "R:6VBE1JLANTMV", "R:UFGMTQLP3H5J", "R:52OMU7AEFJE8", "R:MFP4S2F9MF7F", "R:F45FD2M7NRMS", "R:EN6PH70VD7LV", "R:M3F90V7UJL03", "R:EJRRQ2IU0JS0", "R:LMIPDLENLMJG", "R:VCP8LGVCL71S"];
+    var RES = ["R:G503ILGF8S28", "R:O123T11GLFK9", "R:CTDCID13AB9F", "R:JCF2OQOGMT7O", "R:B0LVRU4VENJS", "R:4PGJIM7IPCOV", "R:QJ204MMAGROF", "R:LAO8Q29LE1TO", "R:4LVSPIK3B203", "R:S9IQLHG3U700", "R:INH1T34JAHE4", "R:1EF948RMIQRD", "R:HA8GLOB3BT28", "R:U7VJ9SGIHTNO", "R:P637DGG88RRB", "R:307B8VJHSQ38", "R:O18PU18DTSMO", "R:85GD560O0A62", "R:RGDNTIFOJEJ1", "R:PQF1C511M1BQ", "R:5A1F5RDNRR3D", "R:SPMG8J9324MB", "R:6VBE1JLANTMV", "R:UFGMTQLP3H5J", "R:52OMU7AEFJE8", "R:MFP4S2F9MF7F", "R:F45FD2M7NRMS", "R:EN6PH70VD7LV", "R:M3F90V7UJL03", "R:EJRRQ2IU0JS0", "R:LMIPDLENLMJG", "R:VCP8LGVCL71S"];
     ui.registerTextStyle([
         { id: "normal", font: "28px", color: "#bbadfb" },
         { id: "normalCenter", font: "28px", color: "#bbadfb", align: 1 },
@@ -126,30 +126,27 @@ var game;
             [UI[2], , "game", 0, 0, , , 710, 1280, , , , , , , , , , , , , [
                     { type: "Image", src: RES[3] },
                     { type: "Image", src: RES[4], anchorX: 0.5, anchorY: 0.5, x: 242, y: 920.5 },
-                    { type: "Image", src: RES[5], angle: -33, x: 738, y: 535, anchorX: 0.5, anchorY: 0.5 },
-                    { type: "Image", src: RES[5], angle: 32, x: 562, y: 95, anchorX: 0.5, anchorY: 0.5 },
-                    { type: "Image", src: RES[6], anchorX: 0.5, anchorY: 0.5, x: 318, y: 578.5, width: 246, height: 119 },
                 ]],
             [UI[3], , "touch", , , , , "100%", "100%"],
             [UI[4], , "intro", , , , , "100%", "100%", , , , , , , , , , , , , [
                     [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
                     [UI[4], , , , , , , "100%", 600, , "50%", , , , , , , , , , , [
-                            [UI[0], { src: RES[7] }, , , , , , , , "50%"],
+                            [UI[0], { src: RES[5] }, , , , , , , , "50%"],
                             [UI[6], { label: "确定" }, "ok2Btn", , 400, , , 195, 70, "50%"],
                         ]],
                 ]],
             [UI[4], , "helpPage", , , , , "100%", "100%", , , , false, , , , , , , , , [
                     [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
-                    [UI[0], { src: RES[8] }, , , 160, , , , , "50%"],
+                    [UI[0], { src: RES[6] }, , , 160, , , , , "50%"],
                     [UI[4], , , , 900, , 0, "100%", , , , , , , , , , , , , , [
                             [UI[6], { label: "已知晓" }, "okBtn", , "30%", , , 195, 70, "50%"],
                         ]],
                 ]],
             [UI[4], , "clock", , , , , 66, 66, 611, 127, , false, , , , , , , , , [
-                    [UI[0], { src: RES[9] }],
+                    [UI[0], { src: RES[7] }],
                     [UI[1], { font: "34px", color: "#fff", align: 5 }, "time", , , , , "100%", "100%"],
                 ]],
-            [UI[0], { src: RES[10] }, "disk", , , , , , , , , , false],
+            [UI[0], { src: RES[8] }, "disk", , , , , , , , , , false],
             [UI[4], { textStyle: "gameHead" }, , , , , , "100%", 70, , , , , , , , , , , , , [
                     [UI[5], { color: "#2c296e" }, , , , , , "100%", 70],
                     [UI[5], { color: "#6854aa" }, , , 70, , , "100%", 2],
@@ -158,7 +155,7 @@ var game;
                     [UI[1], { text: "得分 0" }, "score", 290, 24, , , 140, 27],
                     [UI[1], { text: "机会 5" }, "chance", 430, 24, , , 120, 27],
                     [UI[6], { label: "说明" }, "help", 510, 24, , , 130, 30, , , , , , , , , , , { bk: { src: "" }, label: { color: "#5186ff" } }],
-                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[11] }, checkImg: { src: RES[12] } }],
+                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[9] }, checkImg: { src: RES[10] } }],
                 ]]
         ];
         return _GamePage1;
@@ -190,30 +187,28 @@ var game;
             [UI[2], , "game", 0, 0, , , 710, 1280, , , , , , , , , , , , , [
                     { type: "Image", src: RES[3] },
                     { type: "Image", src: RES[4], anchorX: 0.5, anchorY: 0.5, x: 242, y: 920.5 },
-                    { type: "Image", src: RES[5], angle: -33, x: 738, y: 535, anchorX: 0.5, anchorY: 0.5 },
-                    { type: "Image", src: RES[5], angle: 32, x: 562, y: 95, anchorX: 0.5, anchorY: 0.5 },
-                    { type: "Image", src: RES[6], anchorX: 0.5, anchorY: 0.5, x: 318, y: 578.5, width: 246, height: 119 },
+                    { type: "Image", src: RES[11], angle: 32, x: 562, y: 95, anchorX: 0.5, anchorY: 0.5 },
                 ]],
             [UI[3], , "touch", , , , , "100%", "100%"],
             [UI[4], , "intro", , , , , "100%", "100%", , , , , , , , , , , , , [
                     [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
                     [UI[4], , , , , , , "100%", 600, , "50%", , , , , , , , , , , [
-                            [UI[0], { src: RES[7] }, , , , , , , , "50%"],
+                            [UI[0], { src: RES[5] }, , , , , , , , "50%"],
                             [UI[6], { label: "确定" }, "ok2Btn", , 400, , , 195, 70, "50%"],
                         ]],
                 ]],
             [UI[4], , "helpPage", , , , , "100%", "100%", , , , false, , , , , , , , , [
                     [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
-                    [UI[0], { src: RES[8] }, , , 160, , , , , "50%"],
+                    [UI[0], { src: RES[6] }, , , 160, , , , , "50%"],
                     [UI[4], , , , 900, , 0, "100%", , , , , , , , , , , , , , [
                             [UI[6], { label: "已知晓" }, "okBtn", , "30%", , , 195, 70, "50%"],
                         ]],
                 ]],
             [UI[4], , "clock", , , , , 66, 66, 611, 127, , false, , , , , , , , , [
-                    [UI[0], { src: RES[9] }],
+                    [UI[0], { src: RES[7] }],
                     [UI[1], { font: "34px", color: "#fff", align: 5 }, "time", , , , , "100%", "100%"],
                 ]],
-            [UI[0], { src: RES[10] }, "disk", , , , , , , , , , false],
+            [UI[0], { src: RES[8] }, "disk", , , , , , , , , , false],
             [UI[4], { textStyle: "gameHead" }, , , , , , "100%", 70, , , , , , , , , , , , , [
                     [UI[5], { color: "#2c296e" }, , , , , , "100%", 70],
                     [UI[5], { color: "#6854aa" }, , , 70, , , "100%", 2],
@@ -222,13 +217,77 @@ var game;
                     [UI[1], { text: "得分 0" }, "score", 290, 24, , , 140, 27],
                     [UI[1], { text: "机会 5" }, "chance", 430, 24, , , 120, 27],
                     [UI[6], { label: "说明" }, "help", 510, 24, , , 130, 30, , , , , , , , , , , { bk: { src: "" }, label: { color: "#5186ff" } }],
-                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[11] }, checkImg: { src: RES[12] } }],
+                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[9] }, checkImg: { src: RES[10] } }],
                 ]]
         ];
         return _GamePage2;
     }(ui.Container));
     game._GamePage2 = _GamePage2;
     ez.initCall(function () { ui.initUIClass(game.GamePage2, ui.Container); });
+    var _GamePage3 = (function (_super) {
+        __extends(_GamePage3, _super);
+        function _GamePage3(parent, template) {
+            var _this = _super.call(this, parent) || this;
+            if (template) {
+                _this._createChilds(template.childs);
+                template.init(_this);
+            }
+            else
+                _this._createChilds(_GamePage3._childs);
+            var n = _this.namedChilds;
+            _this.width = "100%";
+            _this.height = "100%";
+            return _this;
+        }
+        Object.defineProperty(_GamePage3.prototype, "namedChilds", {
+            get: function () { return this._namedChilds; },
+            enumerable: false,
+            configurable: true
+        });
+        _GamePage3.ClassName = "game.GamePage3";
+        _GamePage3._childs = [
+            [UI[2], , "game", 0, 0, , , 710, 1280, , , , , , , , , , , , , [
+                    { type: "Image", src: RES[3] },
+                    { type: "Image", src: RES[4], anchorX: 0.5, anchorY: 0.5, x: 242, y: 920.5 },
+                    { type: "Image", src: RES[11], angle: -33, x: 738, y: 535, anchorX: 0.5, anchorY: 0.5 },
+                    { type: "Image", src: RES[11], angle: 32, x: 562, y: 95, anchorX: 0.5, anchorY: 0.5 },
+                    { type: "Image", src: RES[12], anchorX: 0.5, anchorY: 0.5, x: 318, y: 578.5, width: 246, height: 119 },
+                ]],
+            [UI[3], , "touch", , , , , "100%", "100%"],
+            [UI[4], , "intro", , , , , "100%", "100%", , , , , , , , , , , , , [
+                    [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
+                    [UI[4], , , , , , , "100%", 600, , "50%", , , , , , , , , , , [
+                            [UI[0], { src: RES[5] }, , , , , , , , "50%"],
+                            [UI[6], { label: "确定" }, "ok2Btn", , 400, , , 195, 70, "50%"],
+                        ]],
+                ]],
+            [UI[4], , "helpPage", , , , , "100%", "100%", , , , false, , , , , , , , , [
+                    [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
+                    [UI[0], { src: RES[6] }, , , 160, , , , , "50%"],
+                    [UI[4], , , , 900, , 0, "100%", , , , , , , , , , , , , , [
+                            [UI[6], { label: "已知晓" }, "okBtn", , "30%", , , 195, 70, "50%"],
+                        ]],
+                ]],
+            [UI[4], , "clock", , , , , 66, 66, 611, 127, , false, , , , , , , , , [
+                    [UI[0], { src: RES[7] }],
+                    [UI[1], { font: "34px", color: "#fff", align: 5 }, "time", , , , , "100%", "100%"],
+                ]],
+            [UI[0], { src: RES[8] }, "disk", , , , , , , , , , false],
+            [UI[4], { textStyle: "gameHead" }, , , , , , "100%", 70, , , , , , , , , , , , , [
+                    [UI[5], { color: "#2c296e" }, , , , , , "100%", 70],
+                    [UI[5], { color: "#6854aa" }, , , 70, , , "100%", 2],
+                    [UI[0], , "avatar", 28, 13, , , 50, 50],
+                    [UI[1], { format: 8 }, "name", 87, 24, , , 200, 27],
+                    [UI[1], { text: "得分 0" }, "score", 290, 24, , , 140, 27],
+                    [UI[1], { text: "机会 5" }, "chance", 430, 24, , , 120, 27],
+                    [UI[6], { label: "说明" }, "help", 510, 24, , , 130, 30, , , , , , , , , , , { bk: { src: "" }, label: { color: "#5186ff" } }],
+                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[9] }, checkImg: { src: RES[10] } }],
+                ]]
+        ];
+        return _GamePage3;
+    }(ui.Container));
+    game._GamePage3 = _GamePage3;
+    ez.initCall(function () { ui.initUIClass(game.GamePage3, ui.Container); });
     var MainFrame = (function (_super) {
         __extends(MainFrame, _super);
         function MainFrame(parent, template) {
@@ -475,9 +534,9 @@ var game;
                     [UI[6], , "start", , , 80, "15%", 218, 85, , , , , , , , , , , { bk: { src: RES[31] } }],
                     [UI[6], { style: "yellow", label: "排行榜" }, "rank", 44, 92, , , 146, 54],
                 ]],
-            [UI[7], , "sound", 570, 92, , , 56, 59, , , , , , , , , , , { icon: { src: RES[11] }, checkImg: { src: RES[12] } }],
+            [UI[7], , "sound", 570, 92, , , 56, 59, , , , , , , , , , , { icon: { src: RES[9] }, checkImg: { src: RES[10] } }],
             [UI[4], , "helpPage", , , , , "100%", "100%", , , , false, , , , , , , , , [
-                    [UI[0], { src: RES[8] }, , , 160, , , , , "50%"],
+                    [UI[0], { src: RES[6] }, , , 160, , , , , "50%"],
                     [UI[4], , , , 900, , 0, "100%", , , , , , , , , , , , , , [
                             [UI[6], { label: "已知晓" }, "okBtn", , "30%", , , 195, 70, "50%"],
                         ]],

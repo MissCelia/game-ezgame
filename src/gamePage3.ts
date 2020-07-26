@@ -29,25 +29,26 @@ namespace game {
 		{ type: EnemyType.Batman, x: 247, y: 835 },
 		{ type: EnemyType.Batman, x: 422, y: 820 },
 		{ type: EnemyType.Batman, x: 189, y: 551 },
-		{ type: EnemyType.Batman, x: 347, y: 835 },
-		{ type: EnemyType.Batman, x: 482, y: 820 },
-		{ type: EnemyType.Batman, x: 289, y: 521 },
 		{ type: EnemyType.Logo, x: 617, y: 497 },
 		{ type: EnemyType.Logo, x: 222, y: 361 },
 		{ type: EnemyType.Logo, x: 337, y: 765 },
-		{ type: EnemyType.Logo, x: 622, y: 261 },
-		{ type: EnemyType.Logo, x: 137, y: 265 },
-		{ type: EnemyType.BatmanKing, x: 375, y: 185 },
 		{ type: EnemyType.BatmanKing, x: 575, y: 785 },
 		{ type: EnemyType.Mask, x: 87.5, y: 356 },
+		{ type: EnemyType.Boom, x: 166, y: 260 }
 	]
 
-    var hole = [-100, -100] 
+	// 黑洞的位置
+	var hole = [318, 578];
 
 	// 设置墙体位置
 	var lines = [
-		[0,  70, 710, 70],
-		[710, 70, 710, 1280],
+		[0,  70, 490, 70],
+		[490,70, 710, 205],
+		[710, 205, 710, 524],
+		[710, 524, 446, 695],
+		[446, 695, 466, 723],
+		[466, 723, 710, 564],
+		[710, 564, 710, 1280],
 		[0, 70, 0, 1280],
 		[120, 902, 361, 902],
 		[361, 902, 361, 934],
@@ -60,7 +61,7 @@ namespace game {
 
 
 	// 导出构造函数, 用于创建游戏UI和交互逻辑
-	export class GamePage1 extends _GamePage1 {
+	export class GamePage3 extends _GamePage3 {
 
 		constructor(parent: ui.Container) {
 			super(parent);
@@ -136,7 +137,7 @@ namespace game {
 				hole,
 				player,
 				gameOver () {
-					gameUtils.showResult(ctx, 'GamePage2');
+					gameUtils.showResult(ctx, 'GamePage1');
 				},
 				launchResovleStatusChange (val) {
 					launchResovle = val

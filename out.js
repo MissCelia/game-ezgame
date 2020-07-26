@@ -10731,7 +10731,7 @@ var game;
 (function (game) {
     var ui = ez.ui;
     var UI = ["Image", "Label", "UIStage", "Control", "Group", "RectFill", "game.Button", "game.Checkbox", "game.StartPage", "game.RankPage", "ScrollView", "ListView"];
-    var RES = ["R:G503ILGF8S28", "R:O123T11GLFK9", "R:CTDCID13AB9F", "R:JCF2OQOGMT7O", "R:B0LVRU4VENJS", "R:1EF948RMIQRD", "R:HA8GLOB3BT28", "R:4PGJIM7IPCOV", "R:QJ204MMAGROF", "R:LAO8Q29LE1TO", "R:4LVSPIK3B203", "R:S9IQLHG3U700", "R:INH1T34JAHE4", "R:U7VJ9SGIHTNO", "R:P637DGG88RRB", "R:307B8VJHSQ38", "R:O18PU18DTSMO", "R:85GD560O0A62", "R:RGDNTIFOJEJ1", "R:PQF1C511M1BQ", "R:5A1F5RDNRR3D", "R:SPMG8J9324MB", "R:6VBE1JLANTMV", "R:UFGMTQLP3H5J", "R:52OMU7AEFJE8", "R:MFP4S2F9MF7F", "R:F45FD2M7NRMS", "R:EN6PH70VD7LV", "R:M3F90V7UJL03", "R:EJRRQ2IU0JS0", "R:LMIPDLENLMJG", "R:VCP8LGVCL71S"];
+    var RES = ["R:G503ILGF8S28", "R:O123T11GLFK9", "R:CTDCID13AB9F", "R:JCF2OQOGMT7O", "R:B0LVRU4VENJS", "R:4PGJIM7IPCOV", "R:QJ204MMAGROF", "R:LAO8Q29LE1TO", "R:4LVSPIK3B203", "R:S9IQLHG3U700", "R:INH1T34JAHE4", "R:1EF948RMIQRD", "R:HA8GLOB3BT28", "R:U7VJ9SGIHTNO", "R:P637DGG88RRB", "R:307B8VJHSQ38", "R:O18PU18DTSMO", "R:85GD560O0A62", "R:RGDNTIFOJEJ1", "R:PQF1C511M1BQ", "R:5A1F5RDNRR3D", "R:SPMG8J9324MB", "R:6VBE1JLANTMV", "R:UFGMTQLP3H5J", "R:52OMU7AEFJE8", "R:MFP4S2F9MF7F", "R:F45FD2M7NRMS", "R:EN6PH70VD7LV", "R:M3F90V7UJL03", "R:EJRRQ2IU0JS0", "R:LMIPDLENLMJG", "R:VCP8LGVCL71S"];
     ui.registerTextStyle([
         { id: "normal", font: "28px", color: "#bbadfb" },
         { id: "normalCenter", font: "28px", color: "#bbadfb", align: 1 },
@@ -10842,30 +10842,27 @@ var game;
             [UI[2], , "game", 0, 0, , , 710, 1280, , , , , , , , , , , , , [
                     { type: "Image", src: RES[3] },
                     { type: "Image", src: RES[4], anchorX: 0.5, anchorY: 0.5, x: 242, y: 920.5 },
-                    { type: "Image", src: RES[5], angle: -33, x: 738, y: 535, anchorX: 0.5, anchorY: 0.5 },
-                    { type: "Image", src: RES[5], angle: 32, x: 562, y: 95, anchorX: 0.5, anchorY: 0.5 },
-                    { type: "Image", src: RES[6], anchorX: 0.5, anchorY: 0.5, x: 318, y: 578.5, width: 246, height: 119 },
                 ]],
             [UI[3], , "touch", , , , , "100%", "100%"],
             [UI[4], , "intro", , , , , "100%", "100%", , , , , , , , , , , , , [
                     [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
                     [UI[4], , , , , , , "100%", 600, , "50%", , , , , , , , , , , [
-                            [UI[0], { src: RES[7] }, , , , , , , , "50%"],
+                            [UI[0], { src: RES[5] }, , , , , , , , "50%"],
                             [UI[6], { label: "确定" }, "ok2Btn", , 400, , , 195, 70, "50%"],
                         ]],
                 ]],
             [UI[4], , "helpPage", , , , , "100%", "100%", , , , false, , , , , , , , , [
                     [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
-                    [UI[0], { src: RES[8] }, , , 160, , , , , "50%"],
+                    [UI[0], { src: RES[6] }, , , 160, , , , , "50%"],
                     [UI[4], , , , 900, , 0, "100%", , , , , , , , , , , , , , [
                             [UI[6], { label: "已知晓" }, "okBtn", , "30%", , , 195, 70, "50%"],
                         ]],
                 ]],
             [UI[4], , "clock", , , , , 66, 66, 611, 127, , false, , , , , , , , , [
-                    [UI[0], { src: RES[9] }],
+                    [UI[0], { src: RES[7] }],
                     [UI[1], { font: "34px", color: "#fff", align: 5 }, "time", , , , , "100%", "100%"],
                 ]],
-            [UI[0], { src: RES[10] }, "disk", , , , , , , , , , false],
+            [UI[0], { src: RES[8] }, "disk", , , , , , , , , , false],
             [UI[4], { textStyle: "gameHead" }, , , , , , "100%", 70, , , , , , , , , , , , , [
                     [UI[5], { color: "#2c296e" }, , , , , , "100%", 70],
                     [UI[5], { color: "#6854aa" }, , , 70, , , "100%", 2],
@@ -10874,7 +10871,7 @@ var game;
                     [UI[1], { text: "得分 0" }, "score", 290, 24, , , 140, 27],
                     [UI[1], { text: "机会 5" }, "chance", 430, 24, , , 120, 27],
                     [UI[6], { label: "说明" }, "help", 510, 24, , , 130, 30, , , , , , , , , , , { bk: { src: "" }, label: { color: "#5186ff" } }],
-                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[11] }, checkImg: { src: RES[12] } }],
+                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[9] }, checkImg: { src: RES[10] } }],
                 ]]
         ];
         return _GamePage1;
@@ -10906,30 +10903,28 @@ var game;
             [UI[2], , "game", 0, 0, , , 710, 1280, , , , , , , , , , , , , [
                     { type: "Image", src: RES[3] },
                     { type: "Image", src: RES[4], anchorX: 0.5, anchorY: 0.5, x: 242, y: 920.5 },
-                    { type: "Image", src: RES[5], angle: -33, x: 738, y: 535, anchorX: 0.5, anchorY: 0.5 },
-                    { type: "Image", src: RES[5], angle: 32, x: 562, y: 95, anchorX: 0.5, anchorY: 0.5 },
-                    { type: "Image", src: RES[6], anchorX: 0.5, anchorY: 0.5, x: 318, y: 578.5, width: 246, height: 119 },
+                    { type: "Image", src: RES[11], angle: 32, x: 562, y: 95, anchorX: 0.5, anchorY: 0.5 },
                 ]],
             [UI[3], , "touch", , , , , "100%", "100%"],
             [UI[4], , "intro", , , , , "100%", "100%", , , , , , , , , , , , , [
                     [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
                     [UI[4], , , , , , , "100%", 600, , "50%", , , , , , , , , , , [
-                            [UI[0], { src: RES[7] }, , , , , , , , "50%"],
+                            [UI[0], { src: RES[5] }, , , , , , , , "50%"],
                             [UI[6], { label: "确定" }, "ok2Btn", , 400, , , 195, 70, "50%"],
                         ]],
                 ]],
             [UI[4], , "helpPage", , , , , "100%", "100%", , , , false, , , , , , , , , [
                     [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
-                    [UI[0], { src: RES[8] }, , , 160, , , , , "50%"],
+                    [UI[0], { src: RES[6] }, , , 160, , , , , "50%"],
                     [UI[4], , , , 900, , 0, "100%", , , , , , , , , , , , , , [
                             [UI[6], { label: "已知晓" }, "okBtn", , "30%", , , 195, 70, "50%"],
                         ]],
                 ]],
             [UI[4], , "clock", , , , , 66, 66, 611, 127, , false, , , , , , , , , [
-                    [UI[0], { src: RES[9] }],
+                    [UI[0], { src: RES[7] }],
                     [UI[1], { font: "34px", color: "#fff", align: 5 }, "time", , , , , "100%", "100%"],
                 ]],
-            [UI[0], { src: RES[10] }, "disk", , , , , , , , , , false],
+            [UI[0], { src: RES[8] }, "disk", , , , , , , , , , false],
             [UI[4], { textStyle: "gameHead" }, , , , , , "100%", 70, , , , , , , , , , , , , [
                     [UI[5], { color: "#2c296e" }, , , , , , "100%", 70],
                     [UI[5], { color: "#6854aa" }, , , 70, , , "100%", 2],
@@ -10938,13 +10933,77 @@ var game;
                     [UI[1], { text: "得分 0" }, "score", 290, 24, , , 140, 27],
                     [UI[1], { text: "机会 5" }, "chance", 430, 24, , , 120, 27],
                     [UI[6], { label: "说明" }, "help", 510, 24, , , 130, 30, , , , , , , , , , , { bk: { src: "" }, label: { color: "#5186ff" } }],
-                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[11] }, checkImg: { src: RES[12] } }],
+                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[9] }, checkImg: { src: RES[10] } }],
                 ]]
         ];
         return _GamePage2;
     }(ui.Container));
     game._GamePage2 = _GamePage2;
     ez.initCall(function () { ui.initUIClass(game.GamePage2, ui.Container); });
+    var _GamePage3 = (function (_super) {
+        __extends(_GamePage3, _super);
+        function _GamePage3(parent, template) {
+            var _this = _super.call(this, parent) || this;
+            if (template) {
+                _this._createChilds(template.childs);
+                template.init(_this);
+            }
+            else
+                _this._createChilds(_GamePage3._childs);
+            var n = _this.namedChilds;
+            _this.width = "100%";
+            _this.height = "100%";
+            return _this;
+        }
+        Object.defineProperty(_GamePage3.prototype, "namedChilds", {
+            get: function () { return this._namedChilds; },
+            enumerable: false,
+            configurable: true
+        });
+        _GamePage3.ClassName = "game.GamePage3";
+        _GamePage3._childs = [
+            [UI[2], , "game", 0, 0, , , 710, 1280, , , , , , , , , , , , , [
+                    { type: "Image", src: RES[3] },
+                    { type: "Image", src: RES[4], anchorX: 0.5, anchorY: 0.5, x: 242, y: 920.5 },
+                    { type: "Image", src: RES[11], angle: -33, x: 738, y: 535, anchorX: 0.5, anchorY: 0.5 },
+                    { type: "Image", src: RES[11], angle: 32, x: 562, y: 95, anchorX: 0.5, anchorY: 0.5 },
+                    { type: "Image", src: RES[12], anchorX: 0.5, anchorY: 0.5, x: 318, y: 578.5, width: 246, height: 119 },
+                ]],
+            [UI[3], , "touch", , , , , "100%", "100%"],
+            [UI[4], , "intro", , , , , "100%", "100%", , , , , , , , , , , , , [
+                    [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
+                    [UI[4], , , , , , , "100%", 600, , "50%", , , , , , , , , , , [
+                            [UI[0], { src: RES[5] }, , , , , , , , "50%"],
+                            [UI[6], { label: "确定" }, "ok2Btn", , 400, , , 195, 70, "50%"],
+                        ]],
+                ]],
+            [UI[4], , "helpPage", , , , , "100%", "100%", , , , false, , , , , , , , , [
+                    [UI[5], { color: "#000" }, , , , , , "100%", "100%", , , 0.3],
+                    [UI[0], { src: RES[6] }, , , 160, , , , , "50%"],
+                    [UI[4], , , , 900, , 0, "100%", , , , , , , , , , , , , , [
+                            [UI[6], { label: "已知晓" }, "okBtn", , "30%", , , 195, 70, "50%"],
+                        ]],
+                ]],
+            [UI[4], , "clock", , , , , 66, 66, 611, 127, , false, , , , , , , , , [
+                    [UI[0], { src: RES[7] }],
+                    [UI[1], { font: "34px", color: "#fff", align: 5 }, "time", , , , , "100%", "100%"],
+                ]],
+            [UI[0], { src: RES[8] }, "disk", , , , , , , , , , false],
+            [UI[4], { textStyle: "gameHead" }, , , , , , "100%", 70, , , , , , , , , , , , , [
+                    [UI[5], { color: "#2c296e" }, , , , , , "100%", 70],
+                    [UI[5], { color: "#6854aa" }, , , 70, , , "100%", 2],
+                    [UI[0], , "avatar", 28, 13, , , 50, 50],
+                    [UI[1], { format: 8 }, "name", 87, 24, , , 200, 27],
+                    [UI[1], { text: "得分 0" }, "score", 290, 24, , , 140, 27],
+                    [UI[1], { text: "机会 5" }, "chance", 430, 24, , , 120, 27],
+                    [UI[6], { label: "说明" }, "help", 510, 24, , , 130, 30, , , , , , , , , , , { bk: { src: "" }, label: { color: "#5186ff" } }],
+                    [UI[7], , "sound", 630, 8, , , 56, , , , , , , , , , , , { icon: { src: RES[9] }, checkImg: { src: RES[10] } }],
+                ]]
+        ];
+        return _GamePage3;
+    }(ui.Container));
+    game._GamePage3 = _GamePage3;
+    ez.initCall(function () { ui.initUIClass(game.GamePage3, ui.Container); });
     var MainFrame = (function (_super) {
         __extends(MainFrame, _super);
         function MainFrame(parent, template) {
@@ -11191,9 +11250,9 @@ var game;
                     [UI[6], , "start", , , 80, "15%", 218, 85, , , , , , , , , , , { bk: { src: RES[31] } }],
                     [UI[6], { style: "yellow", label: "排行榜" }, "rank", 44, 92, , , 146, 54],
                 ]],
-            [UI[7], , "sound", 570, 92, , , 56, 59, , , , , , , , , , , { icon: { src: RES[11] }, checkImg: { src: RES[12] } }],
+            [UI[7], , "sound", 570, 92, , , 56, 59, , , , , , , , , , , { icon: { src: RES[9] }, checkImg: { src: RES[10] } }],
             [UI[4], , "helpPage", , , , , "100%", "100%", , , , false, , , , , , , , , [
-                    [UI[0], { src: RES[8] }, , , 160, , , , , "50%"],
+                    [UI[0], { src: RES[6] }, , , 160, , , , , "50%"],
                     [UI[4], , , , 900, , 0, "100%", , , , , , , , , , , , , , [
                             [UI[6], { label: "已知晓" }, "okBtn", , "30%", , , 195, 70, "50%"],
                         ]],
@@ -11332,7 +11391,7 @@ var gameUtils;
                 break;
             case EnemyType.Boom:
                 s.src = "game/boom";
-                data.score = -10;
+                data.score = -30;
                 data.radius = 20;
                 break;
             case EnemyType.Logo:
@@ -11470,8 +11529,8 @@ var gameUtils;
                         }
                         n.chance.text = "\u673A\u4F1A " + chance;
                         options.launchResovleStatusChange && options.launchResovleStatusChange(null);
-                        dx = r[0] * 0.25;
-                        dy = r[1] * 0.25;
+                        dx = r[0] * 0.35;
+                        dy = r[1] * 0.35;
                         _a.label = 3;
                     case 3:
                         if (!true) return [3, 15];
@@ -11603,10 +11662,21 @@ var gameUtils;
         });
     }
     gameUtils.startGame = startGame;
-    function showResult(ctx) {
+    function showResult(ctx, nextStage) {
         return __awaiter(this, void 0, void 0, function () {
             function commitScore(score) {
                 return new Promise(function (resolve, reject) {
+                    var key = "zxdqw";
+                    var timestamp = Date.now();
+                    var sign = md5.hex(key + "openid" + PlayerInfo.openid + "score" + score + timestamp);
+                    ajax("https://xwfintech.qingke.io/openapi/pinball/add/measy?key=" + key + "&sign=" + sign + "&openid=" + PlayerInfo.openid + "&score=" + score + "&timestamp=" + timestamp, function (e, r) {
+                        if (r.code) {
+                            alert(r.msg);
+                            reject();
+                        }
+                        else
+                            resolve(r.data);
+                    });
                     resolve();
                 });
             }
@@ -11617,9 +11687,6 @@ var gameUtils;
                         page = ctx.parent.createChild(game.ResultPage);
                         n = page.namedChilds;
                         n.score.text = "" + totalScore;
-                        return [4, commitScore(totalScore)];
-                    case 1:
-                        data = _a.sent();
                         game.getRank(n.rankPage);
                         if (data)
                             n.info.text = "\u8D85\u8FC7\u4E86" + data + "\u7684\u73A9\u5BB6";
@@ -11632,7 +11699,7 @@ var gameUtils;
                                     n.rankPage.visible = false;
                                     break;
                                 case "replay":
-                                    page.parent.createChild(game.GamePage2);
+                                    page.parent.createChild(game[nextStage]);
                                     page.dispose();
                                     break;
                                 case "result":
@@ -11653,6 +11720,9 @@ var gameUtils;
                             }
                         });
                         ctx.dispose();
+                        return [4, commitScore(totalScore)];
+                    case 1:
+                        data = _a.sent();
                         return [2];
                 }
             });
@@ -11702,22 +11772,22 @@ var game;
         { type: EnemyType.Batman, x: 247, y: 835 },
         { type: EnemyType.Batman, x: 422, y: 820 },
         { type: EnemyType.Batman, x: 189, y: 551 },
+        { type: EnemyType.Batman, x: 347, y: 835 },
+        { type: EnemyType.Batman, x: 482, y: 820 },
+        { type: EnemyType.Batman, x: 289, y: 521 },
         { type: EnemyType.Logo, x: 617, y: 497 },
         { type: EnemyType.Logo, x: 222, y: 361 },
         { type: EnemyType.Logo, x: 337, y: 765 },
+        { type: EnemyType.Logo, x: 622, y: 261 },
+        { type: EnemyType.Logo, x: 137, y: 265 },
+        { type: EnemyType.BatmanKing, x: 375, y: 185 },
         { type: EnemyType.BatmanKing, x: 575, y: 785 },
         { type: EnemyType.Mask, x: 87.5, y: 356 },
-        { type: EnemyType.Boom, x: 166, y: 260 }
     ];
-    var hole = [318, 578];
+    var hole = [-100, -100];
     var lines = [
-        [0, 70, 490, 70],
-        [490, 70, 710, 205],
-        [710, 205, 710, 524],
-        [710, 524, 446, 695],
-        [446, 695, 466, 723],
-        [466, 723, 710, 564],
-        [710, 564, 710, 1280],
+        [0, 70, 710, 70],
+        [710, 70, 710, 1280],
         [0, 70, 0, 1280],
         [120, 902, 361, 902],
         [361, 902, 361, 934],
@@ -11799,7 +11869,7 @@ var game;
                 hole: hole,
                 player: player,
                 gameOver: function () {
-                    gameUtils.showResult(ctx);
+                    gameUtils.showResult(ctx, 'GamePage2');
                 },
                 launchResovleStatusChange: function (val) {
                     launchResovle = val;
@@ -11857,12 +11927,24 @@ var game;
         { type: EnemyType.Batman, x: 77, y: 536 },
         { type: EnemyType.Batman, x: 435, y: 398 },
         { type: EnemyType.Batman, x: 589, y: 217 },
+        { type: EnemyType.Batman, x: 286, y: 283 },
+        { type: EnemyType.Batman, x: 358, y: 157 },
+        { type: EnemyType.Batman, x: 493, y: 140 },
+        { type: EnemyType.Batman, x: 575, y: 415 },
+        { type: EnemyType.Batman, x: 464, y: 283 },
+        { type: EnemyType.Batman, x: 271, y: 432 },
+        { type: EnemyType.Batman, x: 393, y: 534 },
+        { type: EnemyType.Batman, x: 369, y: 640 },
+        { type: EnemyType.Batman, x: 604, y: 921 },
+        { type: EnemyType.Batman, x: 464, y: 965 },
+        { type: EnemyType.Batman, x: 247, y: 835 },
+        { type: EnemyType.Batman, x: 422, y: 820 },
         { type: EnemyType.Batman, x: 189, y: 551 },
         { type: EnemyType.Logo, x: 617, y: 497 },
         { type: EnemyType.Logo, x: 222, y: 361 },
         { type: EnemyType.Logo, x: 337, y: 765 },
-        { type: EnemyType.BatmanKing, x: 265, y: 785 },
-        { type: EnemyType.Mask, x: 87.5, y: 696 },
+        { type: EnemyType.BatmanKing, x: 575, y: 785 },
+        { type: EnemyType.Mask, x: 87.5, y: 356 },
         { type: EnemyType.Boom, x: 166, y: 260 }
     ];
     var hole = [318, 578];
@@ -11874,6 +11956,171 @@ var game;
         [446, 695, 466, 723],
         [466, 723, 710, 564],
         [710, 564, 710, 1280],
+        [0, 70, 0, 1280],
+        [120, 902, 361, 902],
+        [361, 902, 361, 934],
+        [361, 934, 120, 939],
+        [120, 902, 120, 939],
+        [710, 1280, 0, 1280]
+    ].map(function (l) { return [{ x: l[0], y: l[1] }, { x: l[2], y: l[3] }]; });
+    var launchResovle = null;
+    var GamePage3 = (function (_super) {
+        __extends(GamePage3, _super);
+        function GamePage3(parent) {
+            var _this = _super.call(this, parent) || this;
+            var lastLine = lines[lines.length - 1];
+            lastLine[0].y = lastLine[1].y = parent.getBound().height - 0;
+            var n = _this.namedChilds;
+            var sound = localStorage.getItem("sound");
+            if (sound == null)
+                sound = "1";
+            n.sound.state = sound == "1" ? "check" : "uncheck";
+            var stage = n.game.stage;
+            var player = gameUtils.createPlayer(stage);
+            n.touch.hitTest = function () { return true; };
+            var arrow = new ez.ImageSprite(stage);
+            arrow.src = "game/arrow";
+            arrow.anchorY = 0.5;
+            arrow.visible = false;
+            arrow.zIndex = 1;
+            var arrowWidth = arrow.width;
+            var ctx = _this;
+            var lastPt;
+            if (PlayerInfo) {
+                n.name.text = PlayerInfo.nickname;
+                n.avatar.src = PlayerInfo.headimgurl;
+            }
+            n.touch.onTouchBegin = function (e) {
+                if (!launchResovle)
+                    return;
+                var x = e.screenX;
+                var y = e.screenY;
+                lastPt = [x, y];
+                n.disk.x = x;
+                n.disk.y = y;
+                n.disk.visible = true;
+                e.capture();
+            };
+            n.touch.onTouchMove = function (e) {
+                if (!lastPt)
+                    return;
+                var dx = e.screenX - lastPt[0];
+                var dy = e.screenY - lastPt[1];
+                var r = Math.sqrt(dx * dx + dy * dy);
+                var len = Math.max(12, Math.min(60, r));
+                arrow.width = arrowWidth * len / 60;
+                arrow.visible = true;
+                arrow.x = player.x;
+                arrow.y = player.y;
+                if (dy >= 0)
+                    arrow.angle = Math.acos(dx / r) * (180 / Math.PI) + 180;
+                else
+                    arrow.angle = 180 - Math.acos(dx / r) * (180 / Math.PI);
+            };
+            n.touch.onTouchEnd = function (e) {
+                if (!lastPt)
+                    return;
+                var dx = e.screenX - lastPt[0];
+                var dy = e.screenY - lastPt[1];
+                var r = Math.sqrt(dx * dx + dy * dy) + 0.01;
+                var len = Math.max(10, Math.min(60, r));
+                arrow.visible = false;
+                var angle = arrow.angle;
+                lastPt = null;
+                n.disk.visible = false;
+                if (launchResovle)
+                    launchResovle([-dx * len / r, -dy * len / r]);
+            };
+            gameUtils.startGame(stage, n, {
+                enemiesData: enemiesData,
+                lines: lines,
+                hole: hole,
+                player: player,
+                gameOver: function () {
+                    gameUtils.showResult(ctx, 'GamePage1');
+                },
+                launchResovleStatusChange: function (val) {
+                    launchResovle = val;
+                }
+            });
+            _this.addEventHandler("click", function (e) {
+                switch (e.sender.id) {
+                    case "help":
+                        n.helpPage.visible = true;
+                        break;
+                    case "okBtn":
+                        n.helpPage.visible = false;
+                        break;
+                    case "ok2Btn":
+                        n.intro.visible = false;
+                        break;
+                    case "sound":
+                        var state = e.sender.state;
+                        game.soundEnable(state == "check");
+                        break;
+                }
+            });
+            return _this;
+        }
+        return GamePage3;
+    }(game._GamePage3));
+    game.GamePage3 = GamePage3;
+})(game || (game = {}));
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var game;
+(function (game) {
+    var EnemyType;
+    (function (EnemyType) {
+        EnemyType[EnemyType["Hole"] = 0] = "Hole";
+        EnemyType[EnemyType["Mask"] = 1] = "Mask";
+        EnemyType[EnemyType["Boom"] = 2] = "Boom";
+        EnemyType[EnemyType["Batman"] = 3] = "Batman";
+        EnemyType[EnemyType["BatmanKing"] = 4] = "BatmanKing";
+        EnemyType[EnemyType["Logo"] = 5] = "Logo";
+    })(EnemyType || (EnemyType = {}));
+    var enemiesData = [
+        { type: EnemyType.Batman, x: 77, y: 852 },
+        { type: EnemyType.Batman, x: 77, y: 536 },
+        { type: EnemyType.Batman, x: 589, y: 217 },
+        { type: EnemyType.Batman, x: 286, y: 283 },
+        { type: EnemyType.Batman, x: 358, y: 157 },
+        { type: EnemyType.Batman, x: 575, y: 415 },
+        { type: EnemyType.Batman, x: 393, y: 534 },
+        { type: EnemyType.Batman, x: 369, y: 640 },
+        { type: EnemyType.Batman, x: 604, y: 921 },
+        { type: EnemyType.Batman, x: 464, y: 965 },
+        { type: EnemyType.Batman, x: 189, y: 551 },
+        { type: EnemyType.Batman, x: 347, y: 835 },
+        { type: EnemyType.Batman, x: 482, y: 820 },
+        { type: EnemyType.Batman, x: 289, y: 521 },
+        { type: EnemyType.Logo, x: 517, y: 497 },
+        { type: EnemyType.Logo, x: 322, y: 361 },
+        { type: EnemyType.Logo, x: 137, y: 765 },
+        { type: EnemyType.Logo, x: 237, y: 265 },
+        { type: EnemyType.BatmanKing, x: 575, y: 685 },
+        { type: EnemyType.BatmanKing, x: 275, y: 285 },
+        { type: EnemyType.Mask, x: 187.5, y: 656 },
+        { type: EnemyType.Boom, x: 166, y: 260 },
+        { type: EnemyType.Boom, x: 366, y: 360 },
+        { type: EnemyType.Boom, x: 620, y: 500 }
+    ];
+    var hole = [-100, -100];
+    var lines = [
+        [0, 70, 490, 70],
+        [490, 70, 710, 205],
+        [710, 205, 710, 1280],
         [0, 70, 0, 1280],
         [120, 902, 361, 902],
         [361, 902, 361, 934],
@@ -11955,7 +12202,7 @@ var game;
                 hole: hole,
                 player: player,
                 gameOver: function () {
-                    gameUtils.showResult(ctx);
+                    gameUtils.showResult(ctx, 'GamePage3');
                 },
                 launchResovleStatusChange: function (val) {
                     launchResovle = val;

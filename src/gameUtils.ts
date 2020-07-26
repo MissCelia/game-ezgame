@@ -100,7 +100,7 @@ namespace gameUtils {
 				break;
 			case EnemyType.Boom:
 				s.src = "game/boom";
-				data.score = -10;
+				data.score = -30;
 				data.radius = 20;
 				break;
 			case EnemyType.Logo:
@@ -195,15 +195,15 @@ namespace gameUtils {
 				options.launchResovleStatusChange && options.launchResovleStatusChange(r);
 			});
 			lastPos = [player.x, player.y];
-			let r = await launch;
+			let r = await launch; // 发射角度
 			if (circle){
 				circle.dispose();
 				circle = null;
 			}
 			n.chance.text = `机会 ${chance}`;
 			options.launchResovleStatusChange && options.launchResovleStatusChange(null);
-			let dx = r[0] * 0.25;
-			let dy = r[1] * 0.25;
+			let dx = r[0] * 0.35; // 控制速度
+			let dy = r[1] * 0.35;
 			// 每次循环表示一帧
 			while(true){
 				player.x += dx;
@@ -316,27 +316,26 @@ namespace gameUtils {
 	}
     
     // 游戏结束执行回调,显示结束弹窗
-	export async function showResult(ctx) {
+	export async function showResult(ctx, nextStage) {
 		function commitScore(score) {
 			return new Promise((resolve, reject) =>{
-				// var key = "zxdqw";
-				// var timestamp = Date.now();
-				// var sign = md5.hex(`${key}openid${PlayerInfo.openid}score${score}${timestamp}`);
-				// ajax(`https://xwfintech.qingke.io/openapi/pinball/add/measy?key=${key}&sign=${sign}&openid=${PlayerInfo.openid}&score=${score}&timestamp=${timestamp}`, function (e, r) {
-				// 	if (r.code) {
-				// 		alert(r.msg);
-				// 		reject();
-				// 	}
-				// 	else
-				// 		resolver(r.data);
-				// });
+				var key = "zxdqw";
+				var timestamp = Date.now();
+				var sign = md5.hex(`${key}openid${PlayerInfo.openid}score${score}${timestamp}`);
+				ajax(`https://xwfintech.qingke.io/openapi/pinball/add/measy?key=${key}&sign=${sign}&openid=${PlayerInfo.openid}&score=${score}&timestamp=${timestamp}`, function (e, r) {
+					if (r.code) {
+						alert(r.msg);
+						reject();
+					}
+					else
+						resolve(r.data);
+				});
 				resolve() 
 			});
 		}
 		var page = ctx.parent.createChild(game.ResultPage);
 		var n = page.namedChilds;
 		n.score.text = "" + totalScore;
-		var data = await commitScore(totalScore);
 		game.getRank(n.rankPage);
 		if (data)
 			n.info.text = `超过了${data}的玩家`;
@@ -349,7 +348,7 @@ namespace gameUtils {
 					n.rankPage.visible = false;
 					break;
 				case "replay":
-					page.parent.createChild(game.GamePage2);
+					page.parent.createChild(game[nextStage]);
 					page.dispose();
 					break;
 				case "result":
@@ -375,5 +374,6 @@ namespace gameUtils {
 
 		});
 		ctx.dispose();
+		var data = await commitScore(totalScore);
 	}
 }
