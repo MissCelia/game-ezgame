@@ -1,5 +1,5 @@
 /// <reference path = "./gameUtils.ts" /> 
-/// <reference path ="./background2.ts" />
+/// <reference path ="./background4.ts" />
 namespace game {
 	import ui = ez.ui;
 	enum EnemyType {
@@ -15,39 +15,41 @@ namespace game {
 	var enemiesData = [
 		{ type: EnemyType.Batman, x: 77, y: 852  },
 		{ type: EnemyType.Batman, x: 77, y: 536  },
+		{ type: EnemyType.Batman, x: 435, y: 398 },
 		{ type: EnemyType.Batman, x: 589, y: 217 },
 		{ type: EnemyType.Batman, x: 286, y: 283 },
 		{ type: EnemyType.Batman, x: 358, y: 157 },
+		{ type: EnemyType.Batman, x: 493, y: 140 },
 		{ type: EnemyType.Batman, x: 575, y: 415 },
+		{ type: EnemyType.Batman, x: 464, y: 283 },
+		{ type: EnemyType.Batman, x: 271, y: 432 },
 		{ type: EnemyType.Batman, x: 393, y: 534 },
 		{ type: EnemyType.Batman, x: 369, y: 640 },
 		{ type: EnemyType.Batman, x: 604, y: 921 },
 		{ type: EnemyType.Batman, x: 464, y: 965 },
+		{ type: EnemyType.Batman, x: 247, y: 835 },
+		{ type: EnemyType.Batman, x: 422, y: 820 },
 		{ type: EnemyType.Batman, x: 189, y: 551 },
 		{ type: EnemyType.Batman, x: 347, y: 835 },
 		{ type: EnemyType.Batman, x: 482, y: 820 },
 		{ type: EnemyType.Batman, x: 289, y: 521 },
-		{ type: EnemyType.Logo, x: 517, y: 497 },
-		{ type: EnemyType.Logo, x: 322, y: 361 },
-		{ type: EnemyType.Logo, x: 137, y: 765 },
-		{ type: EnemyType.Logo, x: 237, y: 265 },
-		{ type: EnemyType.BatmanKing, x: 575, y: 685 },
-		{ type: EnemyType.BatmanKing, x: 275, y: 285 },
-		{ type: EnemyType.Mask, x: 187.5, y: 656 },
-		{ type: EnemyType.Boom, x: 166, y: 260 },
-		{ type: EnemyType.Boom, x: 366, y: 360 },
-		{ type: EnemyType.Boom, x: 620, y: 500 }
+		{ type: EnemyType.Logo, x: 617, y: 497 },
+		{ type: EnemyType.Logo, x: 222, y: 361 },
+		{ type: EnemyType.Logo, x: 337, y: 765 },
+		{ type: EnemyType.Logo, x: 622, y: 261 },
+		{ type: EnemyType.Logo, x: 137, y: 265 },
+		{ type: EnemyType.BatmanKing, x: 375, y: 185 },
+		{ type: EnemyType.BatmanKing, x: 575, y: 785 },
+		{ type: EnemyType.Mask, x: 87.5, y: 356 },
 	]
-	var hole = background2.hole
-	var lines = background2.lines
-	// // 黑洞的位置
-	// var hole = [-100, -100];
+	var hole = background4.hole
+	var lines = background4.lines
+    // var hole = [-100, -100] 
 
 	// // 设置墙体位置
 	// var lines = [
-	// 	[0,  70, 490, 70],
-	// 	[490, 70, 710, 205],
-	// 	[710, 205, 710, 1280],
+	// 	[0,  70, 710, 70],
+	// 	[710, 70, 710, 1280],
 	// 	[0, 70, 0, 1280],
 	// 	[120, 902, 361, 902],
 	// 	[361, 902, 361, 934],
@@ -60,7 +62,7 @@ namespace game {
 
 
 	// 导出构造函数, 用于创建游戏UI和交互逻辑
-	export class GamePage2 extends _GamePage2 {
+	export class GamePage4 extends _GamePage4 {
 
 		constructor(parent: ui.Container) {
 			super(parent);
@@ -136,7 +138,7 @@ namespace game {
 				hole,
 				player,
 				gameOver () {
-					gameUtils.showResult(ctx, 'GamePage3');
+					gameUtils.showResult(ctx, 'GamePage1');
 				},
 				launchResovleStatusChange (val) {
 					launchResovle = val

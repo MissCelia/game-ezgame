@@ -1,4 +1,5 @@
 /// <reference path = "./gameUtils.ts" /> 
+/// <reference path ="./background3.ts" />
 namespace game {
 	import ui = ez.ui;
 	enum EnemyType {
@@ -36,26 +37,27 @@ namespace game {
 		{ type: EnemyType.Mask, x: 87.5, y: 356 },
 		{ type: EnemyType.Boom, x: 166, y: 260 }
 	]
+	var hole = background3.hole
+	var lines = background3.lines
+	// // 黑洞的位置
+	// var hole = [318, 578];
 
-	// 黑洞的位置
-	var hole = [318, 578];
-
-	// 设置墙体位置
-	var lines = [
-		[0,  70, 490, 70],
-		[490,70, 710, 205],
-		[710, 205, 710, 524],
-		[710, 524, 446, 695],
-		[446, 695, 466, 723],
-		[466, 723, 710, 564],
-		[710, 564, 710, 1280],
-		[0, 70, 0, 1280],
-		[120, 902, 361, 902],
-		[361, 902, 361, 934],
-		[361, 934, 120, 939],
-		[120, 902, 120, 939],
-		[710, 1280, 0, 1280]
-	].map(l => [{ x: l[0], y: l[1] }, { x: l[2], y: l[3] }] );
+	// // 设置墙体位置
+	// var lines = [
+	// 	[0,  70, 490, 70],
+	// 	[490,70, 710, 205],
+	// 	[710, 205, 710, 524],
+	// 	[710, 524, 446, 695],
+	// 	[446, 695, 466, 723],
+	// 	[466, 723, 710, 564],
+	// 	[710, 564, 710, 1280],
+	// 	[0, 70, 0, 1280],
+	// 	[120, 902, 361, 902],
+	// 	[361, 902, 361, 934],
+	// 	[361, 934, 120, 939],
+	// 	[120, 902, 120, 939],
+	// 	[710, 1280, 0, 1280]
+	// ].map(l => [{ x: l[0], y: l[1] }, { x: l[2], y: l[3] }] );
 
 	var launchResovle = null; // 是否可以发射（发射中不可再发射）
 
@@ -137,7 +139,7 @@ namespace game {
 				hole,
 				player,
 				gameOver () {
-					gameUtils.showResult(ctx, 'GamePage1');
+					gameUtils.showResult(ctx, 'GamePage4');
 				},
 				launchResovleStatusChange (val) {
 					launchResovle = val

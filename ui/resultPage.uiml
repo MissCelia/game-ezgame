@@ -12,7 +12,7 @@
 			<Button id=rank label=查看排行榜 style=blue x=50% width=195 top=669 height=70 />
 			<Button id=result label=生成成绩单 style=blue x=50% width=195 top=769 height=70 />
 			<Group top=840 bottom=0 width=100%>
-				<Button id=replay label=再玩一次 style=purple x=50% width=195 y=50% height=70 />
+				<Button id=replay label=下一关 style=purple x=50% width=195 y=50% height=70 />
 			</Group>
 			<RankPage id=rankPage visible=false />
 		</children>

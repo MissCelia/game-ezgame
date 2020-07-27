@@ -39,10 +39,10 @@ var game;
         { type: EnemyType.BatmanKing, x: 575, y: 785 },
         { type: EnemyType.Mask, x: 87.5, y: 356 },
     ];
-    var hole = background1.hole;
-    var lines = background1.lines;
+    var hole = background4.hole;
+    var lines = background4.lines;
     var launchResovle = null;
-    class GamePage1 extends game._GamePage1 {
+    class GamePage4 extends game._GamePage4 {
         constructor(parent) {
             super(parent);
             var lastLine = lines[lines.length - 1];
@@ -114,7 +114,7 @@ var game;
                 hole,
                 player,
                 gameOver() {
-                    gameUtils.showResult(ctx, 'GamePage2');
+                    gameUtils.showResult(ctx, 'GamePage1');
                 },
                 launchResovleStatusChange(val) {
                     launchResovle = val;
@@ -139,6 +139,6 @@ var game;
             });
         }
     }
-    game.GamePage1 = GamePage1;
+    game.GamePage4 = GamePage4;
 })(game || (game = {}));
-//# sourceMappingURL=gamePage1.js.map
+//# sourceMappingURL=gamePage4.js.map

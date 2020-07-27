@@ -36,6 +36,7 @@ window.onmessage = function (ev) {
 		PlayerInfo = JSON.parse(data.info);
 	if(data.msg == "back"){
 		mainFrame.clearChilds();
+		//mainFrame.createChild(game.GamePage1);
 		mainFrame.createChild(game.GamePage1);
 	}
 }

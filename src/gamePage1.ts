@@ -1,4 +1,5 @@
 /// <reference path = "./gameUtils.ts" /> 
+/// <reference path ="./background1.ts" />
 namespace game {
 	import ui = ez.ui;
 	enum EnemyType {
@@ -41,20 +42,21 @@ namespace game {
 		{ type: EnemyType.BatmanKing, x: 575, y: 785 },
 		{ type: EnemyType.Mask, x: 87.5, y: 356 },
 	]
+	var hole = background1.hole
+	var lines = background1.lines
+    // var hole = [-100, -100] 
 
-    var hole = [-100, -100] 
-
-	// 设置墙体位置
-	var lines = [
-		[0,  70, 710, 70],
-		[710, 70, 710, 1280],
-		[0, 70, 0, 1280],
-		[120, 902, 361, 902],
-		[361, 902, 361, 934],
-		[361, 934, 120, 939],
-		[120, 902, 120, 939],
-		[710, 1280, 0, 1280]
-	].map(l => [{ x: l[0], y: l[1] }, { x: l[2], y: l[3] }] );
+	// // 设置墙体位置
+	// var lines = [
+	// 	[0,  70, 710, 70],
+	// 	[710, 70, 710, 1280],
+	// 	[0, 70, 0, 1280],
+	// 	[120, 902, 361, 902],
+	// 	[361, 902, 361, 934],
+	// 	[361, 934, 120, 939],
+	// 	[120, 902, 120, 939],
+	// 	[710, 1280, 0, 1280]
+	// ].map(l => [{ x: l[0], y: l[1] }, { x: l[2], y: l[3] }] );
 
 	var launchResovle = null; // 是否可以发射（发射中不可再发射）
 

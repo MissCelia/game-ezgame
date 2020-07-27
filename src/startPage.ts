@@ -68,6 +68,7 @@ namespace game {
 						n.rankPage.visible = false;
 						break;
 					case "start":
+						//ctx.parent.createChild(GamePage1);
 						ctx.parent.createChild(GamePage1);
 						ctx.dispose();
 						window.parent.postMessage({ msg: "gamestart" }, "*");
